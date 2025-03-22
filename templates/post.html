@@ -1,14 +1,25 @@
+{% load static %}
 
-{% for post in object_list %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
 
-
-    <h1>{{post.title}}</h1>
-
-    <p>{{post.content}}</p>
-
-
-    {% if post.image %}                                               <!-- ciclo para cuando alguno de los post no tenga imagen -->
-    <img src="{{post.image.url}}" alt="A pinture of {{post.title}}">  <!-- el ciclo no se coloca si todos los post tendran imagenes -->
-    {% endif %}                                                       <!-- final del ciclo -->
-
-{% endfor %}
+</head>
+<body>
+    <div class="post-container">
+        {% for post in object_list %}
+        <div class="post">
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.content }}</p>
+            {% if post.image %}
+            <img src="{{ post.image.url }}" alt="A picture of {{ post.title }}">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -117,6 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']           #Aqui se agrego la carpeta static
 MEDIA_URL = '/media/'                              #parte de la configuracion de las imagenes
 MEDIA_ROOT = BASE_DIR / 'media'                   #parte de la configuracion de las imagenes
 
