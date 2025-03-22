@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings                       #Aqui se importa la libreria settings
-from django.conf.urls.static import static             #Aqui se importa la libreria static
+from django.conf.urls.static import static             #Aqui se importa la libreria 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('post.urls')),                  #templates
+    path('post', include('post.urls')),                  #templates
+    path('', include('movies.urls')),         #aqui se regitra la url de la app movies
 ]
+
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
