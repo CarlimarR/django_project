@@ -1,0 +1,54 @@
+body {
+    background-color: #b2f2bb; /* Fondo verde pastel */
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Tipografía redondeada sans-serif */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los cuadros */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    justify-content: flex-start; /* Centra los cuadros horizontalmente */
+    width: 100%; /* Asegura que el contenedor ocupe el ancho disponible */
+}
+
+.movies {
+    background-color: white; /* Fondo blanco para los cuadros */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    flex: 1 1 calc(33.333% - 40px); /* Tres cuadros por fila, considerando el gap */
+    box-sizing: border-box;
+    padding: 20px;
+    max-width: calc(33.333% - 40px); /* Asegura que no se desborde */
+}
+
+.movies h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
+    color: #13783f; /* Verde que contrasta con el fondo pastel */
+}
+
+.movies p {
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: justify; /* Justifica el texto del contenido */
+}
+
+.movies img {
+    max-width: 100%;
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    margin-top: 10px;
+}
+
+/* Ajuste para que las publicaciones que no completan una fila de tres no queden centradas */
+.movies-container::after {
+    content: "";
+    flex: auto;
+    max-width: calc(33.333% - 40px); /* Igual al ancho de un post */
+}
