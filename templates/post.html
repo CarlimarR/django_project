@@ -1,8 +1,14 @@
 
 {% for post in object_list %}
 
+
     <h1>{{post.title}}</h1>
 
     <p>{{post.content}}</p>
+
+
+    {% if post.image %}                                               <!-- ciclo para cuando alguno de los post no tenga imagen -->
+    <img src="{{post.image.url}}" alt="A pinture of {{post.title}}">  <!-- el ciclo no se coloca si todos los post tendran imagenes -->
+    {% endif %}                                                       <!-- final del ciclo -->
 
 {% endfor %}
