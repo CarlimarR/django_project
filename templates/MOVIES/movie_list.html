@@ -16,7 +16,7 @@
             {% if movies.image %}
             <img src="{{movies.image.url}}" alt="A picture of {{ movies.title }">
             {% endif %}
-            <h2>{{ movies.title }} </h2>
+            <h2><a href="{% url 'movie_details' movies.pk %}">{{ movies.title }}</a></h2>
             <h4> {{ movies.genre }} </h4>
             <h6> {{ movies.release_date }} </h6>
             <p>{{ movies.description }} </p>

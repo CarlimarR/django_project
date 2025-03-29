@@ -1,0 +1,70 @@
+
+
+body {
+    background-color: #b2f2bb; /* Fondo verde pastel */
+    font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Tipografía redondeada sans-serif */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+}
+
+
+.movies {
+    background-color: white; /* Fondo blanco para los cuadros */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    max-width: calc(90% - 10px); /* Asegura que no se desborde */
+}
+
+.movies h1 {
+    display: flex;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
+    color: #13783f; /* Verde que contrasta con el fondo pastel */
+    justify-content: center; /* Centra el título */
+
+}
+
+.movies h4 {
+    display: flex;
+
+    margin-bottom: 10px;
+    text-align: center; /* Centra el título */
+    color: #0b2918; /* Verde que contrasta con el fondo pastel */
+    justify-content: center; /* Centra el título */
+
+}
+
+.movies h6 {
+    display: flex;
+
+    margin-bottom: 0px;
+    text-align: center; /* Centra el título */
+    color: #0c2818; /* Verde que contrasta con el fondo pastel */
+    justify-content: center; /* Centra el título */
+
+}
+
+.movies p {
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: center; /* Justifica el texto del contenido */
+}
+
+.movies img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30%;
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    margin-top: 10px;
+
+
+
+
+}
+

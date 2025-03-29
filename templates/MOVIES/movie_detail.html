@@ -1,3 +1,4 @@
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -5,18 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/movie_detail.css' %}">
 </head>
 <body>
-    
+
+    <div class="movies">
     <!-- el modelo a utilizar debe ir acompa;ado del articulo "object" por defecto, -->
-     <!-- O el nombre del modelo de la clase (en este caso "Movies") -->
-    <h2>{{ object.title }} </h2> 
-    <h4> {{ object.genre }} </h4>
-    <h6> {{ object.release_date }} </h6>
-    {% if movies.image %}
-    <img src="{{movies.image.url}}" alt="A picture of {{ movies.title }">
-    {% endif %}
-    <p>{{ object.description }} </p>
+    <!-- O el nombre del modelo de la clase (en este caso "Movies") -->
+        <h1>{{ object.title }} </h1> 
+        <h4> {{ object.genre }} </h4>
+        <h6> {{ object.release_date }} </h6>   
+        {% if movies.image %}
+        <img src="{{movies.image.url}}" alt="A picture of {{ movies.title }">
+        {% endif %}
+        <p>{{ object.description }} </p>
+    </div>
+
+
 
 </body>
 </html>
