@@ -1,2 +1,23 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- el modelo a utilizar debe ir acompa;ado del articulo "object" por defecto, -->
+     <!-- O el nombre del modelo de la clase (en este caso "Movies") -->
+    <h2>{{ object.title }} </h2> 
+    <h4> {{ object.genre }} </h4>
+    <h6> {{ object.release_date }} </h6>
+    {% if movies.image %}
+    <img src="{{movies.image.url}}" alt="A picture of {{ movies.title }">
+    {% endif %}
+    <p>{{ object.description }} </p>
+
+</body>
+</html>
 
